@@ -1,0 +1,162 @@
+/* COLOURS AND SPACING: change these to restyle the whole site */
+:root {
+  --text: #1A1D2E;
+  --text-soft: #444A5E;
+  --bg: #FFFFFF;
+  --bg-alt: #F3F4F8;
+  --navy: #87CEEB;
+  --nav-text: #1A1D2E;
+  --line: #D5D8E3;
+  --accent: #1F3FA8;
+  --space-s: 8px;
+  --space-m: 24px;
+  --space-l: 40px;
+}
+
+/* BASIC TEXT: styles every page element */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; line-height: 1.2; }
+h1 { font-size: 3rem; margin: 0 0 var(--space-m); }
+h2 { font-size: 1.75rem; margin: 0 0 var(--space-m); }
+h3 { font-size: 1.2rem; margin: 0 0 var(--space-s); }
+p { max-width: 65ch; margin: 0 0 var(--space-m); color: var(--text-soft); }
+a { color: var(--accent); }
+
+/* KEYBOARD FOCUS: a clear outline when tabbing through links */
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* SMOOTH SCROLLING: nav links glide to their section */
+html { scroll-behavior: smooth; }
+
+/* PAGE WIDTH: keeps the content in a centred column */
+main { max-width: 860px; margin: 0 auto; padding: 0 var(--space-m); }
+section { padding-top: var(--space-l); scroll-margin-top: 56px; }
+
+/* NAVIGATION BAR: navy bar built with flexbox, stays at the top while scrolling */
+#top-bar { background: var(--navy); position: sticky; top: 0; z-index: 10; }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--space-m);
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--nav-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-s);
+  color: var(--nav-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: #FFFFFF; }
+#top-bar a:focus-visible { outline-color: #FFFFFF; }
+
+/* BUTTONS: used for email, LinkedIn and download */
+.button-row { display: flex; flex-wrap: wrap; gap: var(--space-s); }
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-m);
+  background: var(--accent);
+  color: #FFFFFF;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.button:hover { background: var(--navy); border-color: var(--navy); }
+.button-outline { background: var(--bg); color: var(--accent); }
+.button-outline:hover { background: var(--bg-alt); color: var(--navy); border-color: var(--navy); }
+
+/* HERO SECTION: the first thing a visitor sees */
+#hero p { font-size: 1.15rem; }
+
+/* CARDS: flat boxes in a grid, no shadows */
+.card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-m); }
+.card {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: var(--space-m);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.card:hover { background: var(--bg-alt); border-color: var(--accent); }
+.card p { margin: 0; }
+
+/* LISTS: education and skills */
+.plain-list { list-style: none; margin: 0; padding: var(--space-s) var(--space-m); max-width: 65ch; border: 1px solid var(--line); border-radius: 4px; }
+.plain-list li + li { border-top: 1px solid var(--line); }
+.plain-list li { padding: var(--space-s) 0; color: var(--text-soft); }
+.plain-list strong, #resume strong { color: var(--text); }
+
+/* PAPER RESUME: grey backdrop with a white sheet on top */
+#resume-area { margin-top: var(--space-l); padding: var(--space-l) var(--space-m); background: var(--bg-alt); }
+#resume-area > h2, #resume-area > p { max-width: 700px; margin-left: auto; margin-right: auto; }
+#resume-area > p { margin-bottom: var(--space-m); }
+#resume {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-l);
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  font-size: 16px;
+  line-height: 1.5;
+}
+#resume .resume-name { font-size: 2rem; margin-bottom: var(--space-s); }
+#resume h3 { margin: var(--space-m) 0 var(--space-s); padding-bottom: var(--space-s); border-bottom: 1px solid var(--line); }
+#resume p { max-width: none; margin: 0 0 var(--space-s); }
+#resume ul { margin: 0; padding-left: 20px; }
+#resume li { margin-bottom: var(--space-s); color: var(--text-soft); }
+
+/* SMALL SCREENS: phones and narrow windows */
+@media (max-width: 699px) {
+  h1 { font-size: 2.25rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  #resume { padding: var(--space-m); }
+}
+
+/* REDUCED MOTION: turns off smooth scrolling and fades for people who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav-link, .button, .card { transition: none; }
+}
+
+/* PRINT PAGE SIZE: A4 with margins */
+@page { size: A4; margin: 15mm; }
+
+/* PRINTING: hide everything except the resume, black text on white */
+@media print {
+  .no-print { display: none; }
+  body, #resume-area { background: #FFFFFF; margin: 0; padding: 0; }
+  main { max-width: none; padding: 0; }
+  #resume { max-width: none; padding: 0; border: none; font-size: 11pt; line-height: 1.4; }
+  #resume * { color: #000000; border-color: #000000; }
+}
