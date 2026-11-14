@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Riya Sharma | Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <title>Riya Sehrawat | Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="page">
 
   <!-- NAVIGATION BAR -->
   <header class="no-print" id="top-bar">
     <nav class="nav">
       <a class="nav-brand" href="#hero">Home</a>
       <ul class="nav-links">
+        <li><a class="nav-link" href="#hero">About</a></li>
         <li><a class="nav-link" href="#experience">Experience</a></li>
         <li><a class="nav-link" href="#education">Education</a></li>
         <li><a class="nav-link" href="#skills">Skills</a></li>
@@ -27,35 +26,39 @@
 
   <main>
 
-    <!-- HERO: name, one-sentence profile, main buttons -->
+    <!-- HERO: greeting, name, one-sentence profile, main button, circles -->
     <section class="no-print" id="hero">
-      <h1>Riya Sehrawat</h1>
-      <p>I'm studying economics at Delhi University and management at IIM Bangalore. I'm a fresher looking for an internship in consulting, finance or economics, or marketing and startups.</p>
-      <div class="button-row">
-        <a class="button" href="mailto:riya@example.com">Email me</a>
-        <a class="button button-outline" href="https://linkedin.com/in/your-profile">View my LinkedIn</a>
+      <p class="hello">Hello, I'm</p>
+	  <h1>Riya Sehrawat</h1>
+      <p class="intro">An undergraduate student at Delhi University and IIM Bangalore, interested in finance,business and marketing.I enjoy exploring ,digital marketing,social media management and content creation.I'm a curious learner who enjoys teamwork, creative ideas and taking on new challenges.I'm looking forward to gaining practical experience and growing through internship oppurtunities.</p>
+     
+      <a class="button" href="mailto:riya@example.com?subject=Internship%20opportunity">Email me</a>
+      <div class="shapes" aria-hidden="true">
+        <span class="shape shape-blue"></span>
+        <span class="shape shape-amber"></span>
+        <span class="shape shape-red"></span>
       </div>
     </section>
 
-    <!-- EXPERIENCE: four cards -->
+    <!-- EXPERIENCE -->
     <section class="no-print" id="experience">
       <h2>Experience</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Startup internship</h3>
-          <p>Worked on market research at a startup.</p>
+      <div class="box-grid">
+        <article class="box">
+          <h3>Finance Society Coordinator</h3>
+          <p>Contributing to finance-related activities, coordinating initiatives and collaborating with team members on society projects.  .</p>
         </article>
-        <article class="card">
-          <h3>College fest, sponsorship team</h3>
-          <p>Handled sponsorship for the college fest. Used Excel for the fest budget.</p>
+        <article class="box">
+          <h3>Event Volunteer</h3>
+          <p>Handled sponsorship for the college fest,assisting with event coordination ,participant engagement and other activities.</p>
         </article>
-        <article class="card">
-          <h3>Case competitions</h3>
-          <p>Took part in several case competitions. Built a Python model for one case.</p>
+        <article class="box">
+          <h3>MUN Creative Secretary</h3>
+          <p>Handled organisational responsibilities and contributed to creative planning and organisational activities for MUN.</p>
         </article>
-        <article class="card">
-          <h3>Snack launch</h3>
-          <p>Ran 25 customer interviews for a snack launch.</p>
+        <article class="box">
+          <h3>School Marketing & Sales Activities</h3>
+          <p>Participated in school marketing events and stalls, gaining experience in customer interaction, sales and teamwork.</p>
         </article>
       </div>
     </section>
@@ -63,33 +66,45 @@
     <!-- EDUCATION -->
     <section class="no-print" id="education">
       <h2>Education</h2>
-      <ul class="plain-list">
-        <li>B.Sc. Management, IIM Bangalore, 2025 to present</li>
-        <li>B.A. Economics, Delhi University, 2024 to 2027</li>
-        <li>Class 12, CBSE: 88%</li>
-        <li>Class 10, CBSE: 92%</li>
-      </ul>
+      <div class="box-grid">
+        <article class="box">
+          <h3>Management</h3>
+          <p>BBA-Digital Business & Entrepreneurship, IIM Bangalore. 2026 to 2029.</p>
+        </article>
+        <article class="box">
+          <h3>Undergraduate</h3>
+          <p>B.A. Economics, Delhi University. 2026 to 2029.</p>
+        </article>
+        <article class="box">
+          <h3>Class 12</h3>
+          <p>CBSE. 80%.</p>
+        </article>
+        <article class="box">
+          <h3>Class 10</h3>
+          <p>CBSE. 95%.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- SKILLS: each skill with proof -->
+    <!-- SKILLS: short labels (proof for each is on the resume below) -->
     <section class="no-print" id="skills">
       <h2>Skills</h2>
-      <ul class="plain-list">
-        <li><strong>Excel:</strong> used for the fest budget.</li>
-        <li><strong>Python:</strong> built a model for a case competition.</li>
-        <li><strong>Customer interviews:</strong> ran 25 for a snack launch.</li>
-        <li><strong>Market research:</strong> done during the startup internship.</li>
+      <ul class="pill-list">
+        <li class="pill">Excel</li>
+        <li class="pill">Python</li>
+        <li class="pill">Leadership & Coordination</li>
+        <li class="pill">Editing & Designing</li>
+        <li class="pill">Research & Presentation</li>
       </ul>
     </section>
 
     <!-- CONTACT -->
     <section class="no-print" id="contact">
       <h2>Contact</h2>
-      <p>Email me about internships or ideas.</p>
+      <p>Email: <a href="mailto:riyasehrawat082@gmail.com">riyasehrawat082@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/riya-sehrawat-253283444">LinkedIn Profile</a></p>
       <div class="button-row">
-        <a class="button" href="mailto:riya@example.com?subject=Internship%20opportunity">Email me about an internship</a>
-        <a class="button" href="mailto:riya@example.com?subject=Let%27s%20collaborate">Email me to collaborate</a>
-        <a class="button button-outline" href="https://linkedin.com/in/your-profile">View my LinkedIn</a>
+        <a class="button" href="mailto:riyasehrawat082@gmail.com">Email me about an internship</a>
       </div>
     </section>
 
@@ -99,38 +114,42 @@
       <p class="no-print"><a class="button" href="resume.pdf" download>Download my resume (PDF)</a></p>
 
       <div id="resume">
-        <h2 class="resume-name">Riya Sharma</h2>
-        <p class="resume-contact">riya@example.com | linkedin.com/in/your-profile</p>
+        <h2 class="resume-name">Riya Sehrawat</h2>
+        <p class="resume-contact">riyasehrawat082@gmail.com | linkedin.com/in/your-profile</p>
 
-        <p>I'm studying economics at Delhi University and management at IIM Bangalore. I'm a fresher looking for an internship in consulting, finance or economics, or marketing and startups.</p>
+        <p>An undergraduate student at Delhi University and IIM Bangalore, interested in finance,business and marketing.I enjoy exploring ,digital marketing,social media management and content creation.I'm a curious learner who enjoys teamwork, creative ideas and taking on new challenges.I'm looking forward to gaining practical experience and growing through internship oppurtunities.</p>
+     </p>
 
         <h3>Experience</h3>
         <ul>
-          <li><strong>Startup internship.</strong> Worked on market research at a startup.</li>
-          <li><strong>College fest, sponsorship team.</strong> Handled sponsorship for the college fest. Used Excel for the fest budget.</li>
-          <li><strong>Case competitions.</strong> Took part in several case competitions. Built a Python model for one case.</li>
-          <li><strong>Snack launch.</strong> Ran 25 customer interviews for a snack launch.</li>
+          <li><strong>Finance Society Coordinator.</strong>Contributing to finance-related activities, coordinating initiatives and collaborating with team members on society projects .</li>
+          <li><strong>Event Volunteer.</strong>Handled sponsorship for the college fest,assisting with event coordination ,participant engagement and other activities.</li>
+          <li><strong>MUN Creative Secretary.</strong>Handled organisational responsibilities and contributed to creative planning and organisational activities for MUN. </li>
+          <li><strong>School Marketing & Sales Activities</strong>Participated in school marketing events and stalls, gaining experience in customer interaction, sales and teamwork.</li>
         </ul>
 
         <h3>Education</h3>
         <ul>
-          <li>B.Sc. Management, IIM Bangalore, 2025 to present</li>
-          <li>B.A. Economics, Delhi University, 2024 to 2027</li>
-          <li>Class 12, CBSE: 88%</li>
-          <li>Class 10, CBSE: 92%</li>
+          <li>BBA-Digital Business & Entrepreneurship, IIM Bangalore, 2026 to 2029</li>
+          <li>B.A. Economics, Delhi University, 2026 to 2029</li>
+          <li>Class 12, CBSE: 80%</li>
+          <li>Class 10, CBSE: 95%</li>
         </ul>
 
         <h3>Skills</h3>
         <ul>
-          <li><strong>Excel:</strong> used for the fest budget.</li>
-          <li><strong>Python:</strong> built a model for a case competition.</li>
-          <li><strong>Customer interviews:</strong> ran 25 for a snack launch.</li>
-          <li><strong>Market research:</strong> done during the startup internship.</li>
+          <li><strong>Excel</strong></li>
+          <li><strong>Python</strong></li>
+          <li><strong>Leadership & Coordination</strong> </li>
+          <li><strong>Editing & Designing</strong></li>
+          <li><strong>Research & Presentation</strong></li>
         </ul>
       </div>
     </section>
 
   </main>
-
+  <a class="to-top no-print" id="to-top" href="#top-bar" hidden>Back to top</a>
+</div>
 </body>
+<script src="script.js"></script>
 </html>
