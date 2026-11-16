@@ -1,20 +1,20 @@
 /* COLOURS, FONTS AND SPACING: change these to restyle the whole site.
    Red and amber are only used for the circles and the box stripes. */
 :root {
-  --text: #1A1D2E;
-  --text-soft: #444A5E;
+  --text: #263238;
+  --text-soft: #667477;
   --bg: #FFFFFF;
-  --page-bg: #FDFCFA;
-  --box: #F5F5F8;
-  --box-hover: #E9EBF3;
-  --navy: #1E2340;
-  --nav-text: #DDE1F0;
-  --line: #D5D8E3;
-  --blue: #1F3FA8;
-  --red: #C9405E;
-  --amber: #E3A93B;
-  --sans: Arial, Helvetica, sans-serif;
-  --serif: Georgia, "Times New Roman", serif;
+  --page-bg: #F2F8F6;
+  --box: #FFFFFF;
+  --box-hover: #E8F4F0;
+  --navy: #174C4A;
+  --nav-text: #FFFFFF;
+  --line: #D8E8E2;
+  --blue: #168C83;
+  --red: #E98578;
+  --amber: #E7B86B;
+  --sans: "Cormorant Garamond",Georgia, sans-serif;
+  --serif: "Cormorant Garamond",Georgia, serif;
   --space-s: 8px;
   --space-m: 24px;
   --space-l: 40px;
@@ -26,15 +26,18 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   padding-top: 8px;
-  font-family: var(--serif);
-  font-size: 18px;
-  line-height: 1.6;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight:500;
+  font-style:italic;
   color: var(--text);
-  background: var(--page-bg);
+  background:linear gradient(135deg,#F2F8F6,#FFF7F2,#F1F3FA);
 }
-h1, h2, h3 { font-family: var(--sans); line-height: 1.2; }
-h2 { font-size: 1.6rem; margin: 0 0 var(--space-m); }
-h3 { font-size: 1.1rem; margin: 0 0 var(--space-s); }
+h1, h2, h3 { font-family: var(--sans); line-height: 1.25; }
+h1 {color:#168C83;font-size:3rem;}
+h2 { font-size: 1.8rem; margin: 0 0 var(--space-m);color:#174C4A; }
+h3 { font-size: 1.15rem; margin: 0 0 var(--space-s);color:#247B72; }
 p { max-width: 65ch; margin: 0 0 var(--space-s); color: var(--text-soft); }
 a { color: var(--blue); }
 
@@ -48,12 +51,23 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
   background: var(--bg);
   border: 1px solid var(--line);
   border-bottom: none;
+  background-color: #F7F5F0; /* light ivory */
 }
 main { padding: 0 32px 40px; }
 section { padding-top: var(--space-l); scroll-margin-top: 56px; }
 
 /* NAVIGATION BAR: navy bar built with flexbox, stays at the top while scrolling */
-#top-bar { background: var(--navy); position: sticky; top: 0; z-index: 10; }
+#top-bar {
+    background: linear-gradient(
+        90deg,
+        #174C4A,
+        #247B72
+    );
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(23, 76, 74, 0.18);
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -61,6 +75,19 @@ section { padding-top: var(--space-l); scroll-margin-top: 56px; }
   flex-wrap: wrap;
   padding: 0 32px;
   font-family: var(--sans);
+}
+.nav {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+button, .btn {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 .nav-brand {
   display: flex;
@@ -80,8 +107,15 @@ section { padding-top: var(--space-l); scroll-margin-top: 56px; }
   text-decoration: none;
   transition: color 0.2s;
 }
-.nav-link:hover { color: #FFFFFF; }
-#top-bar a:focus-visible { outline-color: #FFFFFF; }
+.#top-bar nav-links a:hover {
+    color: #F3C68D;
+    transition: 0.3s ease;
+}
+
+.nav-links a:focus-visible {
+    outline: 2px solid #E98578;
+    outline-offset: 4px;
+}
 
 /* HERO SECTION: greeting, big blue name, intro, button and circles */
 #hero { position: relative; }
@@ -150,6 +184,7 @@ h1 { margin: 0 0 var(--space-s); font-size: 3.5rem; color: var(--blue); }
   border: 1px solid var(--line);
   font-size: 16px;
   line-height: 1.5;
+  background-color: #F7F5F0; /* light ivory */
 }
 #resume .resume-name { margin-bottom: var(--space-s); font-size: 2rem; }
 #resume h3 { margin: var(--space-m) 0 var(--space-s); padding-bottom: var(--space-s); border-bottom: 1px solid var(--line); }
@@ -186,4 +221,5 @@ h1 { margin: 0 0 var(--space-s); font-size: 3.5rem; color: var(--blue); }
   main { padding: 0; }
   #resume { max-width: none; padding: 0; border: none; font-size: 11pt; line-height: 1.4; }
   #resume * { color: #000000; border-color: #000000; }
+  
 }
